@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c15ac3ef-c12d-4e2b-a222-6258ec1f0902" name="Changes" comment="" />
+    <list default="true" id="c15ac3ef-c12d-4e2b-a222-6258ec1f0902" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/August 14/CW_sort2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/August 14/CW_sort3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/August 16/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/August 16/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +45,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/тапаловс/Documents/GitHub/Classwork_Python_Sultan/July 3",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/тапаловс/Documents/GitHub/Classwork_Python_Sultan/August 21",
     "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
