@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QThread
 
-class UdpReceiver():
+class UDPReceiver():
     def run(self):
-        print("UDPReceiver запущен")
+        print("UdpReceiver запущен")

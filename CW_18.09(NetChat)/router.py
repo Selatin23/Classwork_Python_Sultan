@@ -8,7 +8,7 @@ from gui import Gui
 
 
 #from udp_reciever.udp_receiver import UdpReceiver
-from udp_receiver import UdpReceiver
+from udp_receiver import UDPReceiver
 
 #from udp_sender.udp_sender import UdpSender
 from udp_sender import UdpSender
@@ -18,8 +18,8 @@ class Router(QObject):
     def __init__(self):
         super().__init__()
         self.data_storage = DataStorage()
-        self.gui = Gui
-        self.udp_reciver = UdpReceiver()
+        self.gui = Gui()
+        self.udp_reciver = UDPReceiver()
         self.udp_sender = UdpSender()
 
         # Здесь будем роутить сигналы
