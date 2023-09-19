@@ -22,6 +22,7 @@ class Router(QObject):
         self.udp_reciver = UDPReceiver()
         self.udp_sender = UdpSender()
 
+        self.gui.sendMessage.connect(lambda s: print(s))
         # Здесь будем роутить сигналы
 
     def start(self):
