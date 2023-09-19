@@ -1,7 +1,5 @@
 from PyQt6.QtCore import QObject
 
-from logger import Logger
-
 #from data_storage.data import DataStorage
 from data_storage import DataStorage
 

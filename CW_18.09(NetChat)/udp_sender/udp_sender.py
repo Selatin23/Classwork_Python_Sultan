@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QThread
 
-class UdpSender():
+class UdpSender(QThread):
     def run(self):
         print("UDPStorage запущен")

@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QThread
 
-class DataStorage():
+class DataStorage(QThread):
     def run(self):
         print("DataStorage запущен")
