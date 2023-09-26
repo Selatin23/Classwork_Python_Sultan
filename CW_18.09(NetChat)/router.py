@@ -2,7 +2,7 @@ from PyQt6.QtCore import QObject
 from logger import log
 from gui import Gui
 from data_storage import DataStorage
-from udp_receiver import UdpReceiver
+from udp_receiver import UDPReceiver
 from udp_sender import UdpSender
 from controller import Controller
 
@@ -12,15 +12,24 @@ class Router(QObject):
         super().__init__()
         self.data_storage = DataStorage()
         self.gui = Gui()
-        self.udp_receiver = UdpReceiver()
+        self.udp_receiver = UDPReceiver()
         self.udp_sender = UdpSender()
         self.controller = Controller()
-        self.gui.sendMessage.connect(lambda s: print(s))
+        # Здесь будем роутить сигналы
+
+        # Сигналы Gui
         self.gui.loginUser.connect(self.data_storage.auth)
         self.gui.loginUser.connect(self.controller.login)
+
+        # Сигналы Контроллера
         self.controller.switchWindow.connect(self.gui.set_window)
+
+        # Сигналы UdpReceiver
+        self.udp_receiver.message.connect(self.controller.message_received)
+        self.gui.sendMessage.connect(self.udp_sender.send)
         
-        # Здесь будем роутить сигналы
+        self.udp_receiver.message.connect(self.gui.show_message)
+        
 
     def start(self):
         log.i("Стартуем роутер")
