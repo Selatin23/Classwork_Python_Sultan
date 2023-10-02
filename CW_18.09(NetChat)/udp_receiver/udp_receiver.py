@@ -4,6 +4,7 @@ from logger import log
 
 class UDPReceiver(QThread):
     message = pyqtSignal(str, str)
+    hello = pyqtSignal(str)
 
     def __init__(self):
         super().__init__()

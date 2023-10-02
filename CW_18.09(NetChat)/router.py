@@ -20,15 +20,25 @@ class Router(QObject):
         # Сигналы Gui
         self.gui.loginUser.connect(self.data_storage.auth)
         self.gui.loginUser.connect(self.controller.login)
+        self.gui.sendMessage.connect(self.udp_sender.send)
 
         # Сигналы Контроллера
         self.controller.switchWindow.connect(self.gui.set_window)
+        self.controller.addContact.connect(self.gui.add_contact)
+        self.controller.showMessage.connect(self.gui.show_message)
+        self.controller.sendMessage.connect(self.udp_sender.send)
+        self.controller.setChat.connect(self.gui.set_chat)
 
         # Сигналы UdpReceiver
         self.udp_receiver.message.connect(self.controller.message_received)
-        self.gui.sendMessage.connect(self.udp_sender.send)
-        
         self.udp_receiver.message.connect(self.gui.show_message)
+        self.udp_receiver.hello.connect(self.udp_sender.send)
+
+        # Сигналы Datastorage
+        self.data_storage.ready.connect(self.controller.database_ready)
+        self.data_storage.authOk.connect(self.controller.database_auth_ok)
+        self.data_storage.authBd.connect(self.controller.database_auth_bad)
+
         
 
     def start(self):

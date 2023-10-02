@@ -9,6 +9,8 @@ from .login_window import LoginWindow
 class Gui(QObject):
     sendMessage = pyqtSignal(str, str)
     loginUser = pyqtSignal(str)
+    changeChat = pyqtSignal(str)
+    window : QWidget = None
     window : QWidget = None
     show_message = pyqtSignal(str, str)
     def __init__(self):
